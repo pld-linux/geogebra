@@ -23,6 +23,7 @@ Source12:	http://aur.archlinux.org/packages/geogebra/geogebra/%{name}.png
 # Source12-md5:	e324ee3a2bb438cee625e3f29770a315
 URL:		http://www.geogebra.org
 Requires:	java-sun-jre >= 1.4.2
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,8 +33,6 @@ multiple representations of objects in its graphics, algebra, and
 spreadsheet views that are all dynamically linked.
 
 %prep
-
-%build
 
 %install
 rm -rf $RPM_BUILD_ROOT
