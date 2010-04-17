@@ -22,7 +22,7 @@ Source11:	%{name}.desktop
 Source12:	http://aur.archlinux.org/packages/geogebra/geogebra/%{name}.png
 # Source12-md5:	e324ee3a2bb438cee625e3f29770a315
 URL:		http://www.geogebra.org
-Requires:	java-sun-jre >= 1.4.2
+Requires:	jre >= 1.4.2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
