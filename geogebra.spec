@@ -1,21 +1,21 @@
 Summary:	GeoGebra is dynamic mathematics software
 Name:		geogebra
-Version:	3.2.34
+Version:	3.2.41
 Release:	0.1
 License:	GPL
 Group:		X11/Applications/Science
 Source0:	http://www.geogebra.org/webstart/unpacked/%{version}/unpacked/%{name}.jar
-# Source0-md5:	e275dd6a7a46ce65dbc39e4f7dbf27b6
+# Source0-md5:	61c356e37c7cd24b0f6006f87be2bf05
 Source1:	http://www.geogebra.org/webstart/unpacked/%{version}/unpacked/%{name}_cas.jar
-# Source1-md5:	05b38af666109b1971b935c4779b340e
+# Source1-md5:	2c97a55ede7dce6dfefe96b0a21670f8
 Source2:	http://www.geogebra.org/webstart/unpacked/%{version}/unpacked/%{name}_export.jar
-# Source2-md5:	2b9f74784f1234d4d1c4f7d4c4cdffc4
+# Source2-md5:	62297ff3166887d31d451c0f66488265
 Source3:	http://www.geogebra.org/webstart/unpacked/%{version}/unpacked/%{name}_gui.jar
-# Source3-md5:	91a3039fd613b07b18d545c444778a9f
+# Source3-md5:	b0fe16473d1c2c44ffd8a6660c89e383
 Source4:	http://www.geogebra.org/webstart/unpacked/%{version}/unpacked/%{name}_main.jar
-# Source4-md5:	08434d4739809da3b426554f57100d30
+# Source4-md5:	2919a81fe3dec6fde1dc7e343327c0fd
 Source5:	http://www.geogebra.org/webstart/unpacked/%{version}/unpacked/%{name}_properties.jar
-# Source5-md5:	0e36d2c1f7e03ecdf3c22af80fa02ae9
+# Source5-md5:	831d4e2377df2ea34938bdb933e2a480
 Source10:	%{name}
 # source11 taken from archlinux
 Source11:	%{name}.desktop
