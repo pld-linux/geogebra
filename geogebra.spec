@@ -1,7 +1,7 @@
+%define		geoversion 3-2-45-0
 Summary:	GeoGebra is dynamic mathematics software
 Name:		geogebra
 Version:	3.2.45.0
-%define		geoversion	 %(echo %{version} | tr '.' '-')
 Release:	0.1
 License:	GPL
 Group:		X11/Applications/Science
