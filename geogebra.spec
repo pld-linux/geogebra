@@ -1,21 +1,12 @@
 Summary:	GeoGebra is dynamic mathematics software
 Name:		geogebra
-Version:	3.2.41
+Version:	3.2.45.0
+%define		geoversion	 %(echo %{version} | tr '.' '-')
 Release:	0.1
 License:	GPL
 Group:		X11/Applications/Science
-Source0:	http://www.geogebra.org/webstart/unpacked/%{version}/unpacked/%{name}.jar
-# Source0-md5:	61c356e37c7cd24b0f6006f87be2bf05
-Source1:	http://www.geogebra.org/webstart/unpacked/%{version}/unpacked/%{name}_cas.jar
-# Source1-md5:	2c97a55ede7dce6dfefe96b0a21670f8
-Source2:	http://www.geogebra.org/webstart/unpacked/%{version}/unpacked/%{name}_export.jar
-# Source2-md5:	62297ff3166887d31d451c0f66488265
-Source3:	http://www.geogebra.org/webstart/unpacked/%{version}/unpacked/%{name}_gui.jar
-# Source3-md5:	b0fe16473d1c2c44ffd8a6660c89e383
-Source4:	http://www.geogebra.org/webstart/unpacked/%{version}/unpacked/%{name}_main.jar
-# Source4-md5:	2919a81fe3dec6fde1dc7e343327c0fd
-Source5:	http://www.geogebra.org/webstart/unpacked/%{version}/unpacked/%{name}_properties.jar
-# Source5-md5:	831d4e2377df2ea34938bdb933e2a480
+Source0:	http://geogebra.googlecode.com/files/GeoGebra-MacOS-Installer-%{geoversion}.zip
+# Source0-md5:	5d39c2c225e0085a88001f7eac5ff324
 Source10:	%{name}
 # source11 taken from archlinux
 Source11:	%{name}.desktop
@@ -33,15 +24,18 @@ multiple representations of objects in its graphics, algebra, and
 spreadsheet views that are all dynamically linked.
 
 %prep
+%setup -q -n GeoGebra.app
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{_javadir}/geogebra
+install -d $RPM_BUILD_ROOT%{_javadir}/geogebra/unsigned
 install -d $RPM_BUILD_ROOT%{_bindir}
 install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
-install %{SOURCE0} %{SOURCE1} %{SOURCE2} %{SOURCE3} %{SOURCE4} %{SOURCE5} $RPM_BUILD_ROOT%{_javadir}/geogebra
+install Contents/Resources/Java/*.jar $RPM_BUILD_ROOT%{_javadir}/geogebra
+install Contents/Resources/Java/unsigned/*.jar $RPM_BUILD_ROOT%{_javadir}/geogebra
+
 install %{SOURCE10} $RPM_BUILD_ROOT%{_bindir}
 install %{SOURCE11} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE12} $RPM_BUILD_ROOT%{_pixmapsdir}
