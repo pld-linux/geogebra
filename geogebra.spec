@@ -4,7 +4,7 @@ Version:	3.2.46.0
 Release:	2
 License:	GPL
 Group:		X11/Applications/Science
-Source0:	http://geogebra.googlecode.com/files/GeoGebra-MacOS-Installer-%(echo %{version} | tr "\." "-").zip
+Source0:	http://geogebra.googlecode.com/files/GeoGebra-MacOS-Installer-%(echo %{version} | tr . -).zip
 # Source0-md5:	d2c58f0f0c1fced36c276ce887574dd4
 Source10:	%{name}
 # source11 taken from archlinux
