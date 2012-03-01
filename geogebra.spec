@@ -1,11 +1,11 @@
 Summary:	GeoGebra is dynamic mathematics software
 Name:		geogebra
-Version:	4.0.1.0
+Version:	4.0.22.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Science
 Source0:	http://geogebra.googlecode.com/files/GeoGebra-MacOS-Installer-%(echo %{version} | tr . -).zip
-# Source0-md5:	89952047c64d41795576a8d3317def19
+# Source0-md5:	9b5225e0b8290c0c38e568bcb28774ba
 Source10:	%{name}
 # source11 taken from archlinux
 Source11:	%{name}.desktop
